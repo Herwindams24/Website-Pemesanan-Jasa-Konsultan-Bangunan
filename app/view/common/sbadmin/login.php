@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Herwinda">
 
     <title>Mututama - Login</title>
 
@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-info">
 
     <div class="container">
 
@@ -36,53 +36,61 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <a href="<?= BASEURL; ?>">
+                                            <h1 class="h4 text-gray-900 mb-4">MutuTama</h1>
+                                        </a>
                                     </div>
-                                    <form class="user">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                                    <!---->
+                                    <div class="p-5">
+                                        <div class="text-center">
+                                            <?php Flasher::flash(); ?>
+                                            <h1 class="h6 text-gray-900 mb-4">Selamat Datang!</h1>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember Me</label>
+                                        <form method="POST" action="<?= BASEURL; ?>/Account/checkingLogin" class="user">
+                                            <div class="form-group">
+                                                <input type="username" class="form-control form-control-user" id="username" name="username" placeholder="Enter Username...">
                                             </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox small">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                    <label class="custom-control-label" for="customCheck">Remember Me</label>
+                                                </div>
+                                            </div>
+                                            <button name="submit" type="sumbit" value="submit" id="submit" class="btn btn-info btn-user btn-block">
+                                                Login
+                                            </button>
+                                        </form>
+                                        <hr>
+                                        <div class="text-center">
+                                            <a class="small" href="<?= BASEURL; ?>/Account/forgotpassword">Forgot Password?</a>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </button>
-                                    </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <div class="text-center">
+                                            <a class="small" href="<?= BASEURL; ?>/Account/signUp">Create an Account!</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="<?= BASEURL; ?>/asset2/vendor/jquery/jquery.min.js"></script>
+        <script src="<?= BASEURL; ?>/asset2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?= BASEURL; ?>/asset2/vendor/jquery/jquery.min.js"></script>
-    <script src="<?= BASEURL; ?>/asset2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="<?= BASEURL; ?>/asset2/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?= BASEURL; ?>/asset2/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="<?= BASEURL; ?>/asset2/js/sb-admin-2.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="<?= BASEURL; ?>/asset2/js/sb-admin-2.min.js"></script>
 
 </body>
 

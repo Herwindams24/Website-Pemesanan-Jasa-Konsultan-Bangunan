@@ -46,7 +46,6 @@
         <div class="container clearfix">
             <div class="contact-info float-left">
                 <i class="fa fa-envelope-o"></i> <a href="mailto:herwinda.ms@gmail.com">herwinda.ms@gmail.com</a>
-                <i class="fa fa-phone"></i> +62 85 233 150 035
             </div>
             <div class="social-links float-right">
                 <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
@@ -338,7 +337,7 @@
                         <p class="cta-text"> We delivered quality services to every clients by doing great planning, execution and intense monitoring to the production process.</p>
                     </div>
                     <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">Call To Action</a>
+                        <a class="cta-btn align-middle" href="<?= BASEURL; ?>/Account/login">Call To Action</a>
                     </div>
                 </div>
 

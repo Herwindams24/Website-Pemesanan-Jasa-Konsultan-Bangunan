@@ -4,8 +4,8 @@ class Home extends Controller
 {
     public function index()
     {
-        $this->view('common/home/header');
+        $this->view('common/home2/header');
         $this->view('home/home');
-        $this->view('common/home/footer');
+        $this->view('common/home2/footer');
     }
 }
