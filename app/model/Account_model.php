@@ -48,15 +48,6 @@ class Account_model extends Database
 
     public function checkUsername($username)
     {
-        /*
-        if($this->query("SELECT username FROM users WHERE username = '$username'")){
-        if($this->rowCount() > 0){
-        return false;
-        }else{
-        return true;
-        }
-        }*/
-
         $q = "SELECT username FROM user WHERE username = '$username'";
         $this->db->query($q);
         return $this->db->single();

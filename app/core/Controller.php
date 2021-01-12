@@ -2,9 +2,16 @@
 
 class Controller
 {
-    public function view($view, $data = [])
+    public function view($view, $noInclude = false, $data = array()) 
     {
+        if(count($data) > 0) {
+            extract($data);
+        }
+        if($noInclude == true){
         require_once '../app/view/' . $view . '.php';
+        }else{
+            require_once '../app/view/' . $view . '.php';
+        }
     }
     public function model($model)
     {

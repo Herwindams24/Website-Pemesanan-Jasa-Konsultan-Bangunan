@@ -135,6 +135,7 @@ class Account extends Controller
             $this->view('common/sbadmin/signup', $userData);
         }
     }
+
     public function createUserSession($user)
     {
 
@@ -145,13 +146,15 @@ class Account extends Controller
         $_SESSION['email'] = $user->email;
         //var_dump($user, $_SESSION);
         //die();
-        if ($_SESSION['role'] == 2) {
+        if ($_SESSION['role'] == 1) {
+            $this->redirect("Admin", "index");
+        } elseif ($_SESSION['role'] == 2) {
             $this->redirect("Pelanggan", "index");
         } else {
-
-            $this->redirect("Admin", "index");
+            $this->redirect("Home", "index");
         }
     }
+
     public function forgotpassword()
     {
         $this->view('common/sbadmin/forgotpassword');
@@ -161,7 +164,7 @@ class Account extends Controller
         unset($_SESSION['id_user']);
         unset($_SESSION['username']);
         unset($_SESSION['email']);
-        unset($_SESSION['roll']);
+        unset($_SESSION['role']);
         $this->redirect("Home", "Index");
     }
     public function profil()

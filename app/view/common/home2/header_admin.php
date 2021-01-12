@@ -1,7 +1,8 @@
+    
     <!--==========================
     Header
   ============================-->
-  <header id="header">
+    <header id="header">
         <div class="container">
 
             <div id="logo" class="pull-left">
@@ -13,12 +14,9 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="#body">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
                     <li class="menu-has-children"><a href="">Akun</a>
                         <ul>
-                        <li><a href="<?= BASEURL; ?>/Account/logout">Logout</a></li>
+                            <li><a href="<?= BASEURL; ?>/Account/logout">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

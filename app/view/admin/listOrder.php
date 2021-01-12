@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <title>Mututama | Engineering Consultant</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -51,11 +51,12 @@
     <!-- Main Stylesheet File -->
     <link href="<?= BASEURL; ?>/asset/css/style.css" rel="stylesheet">
     <style>
+        
         h2 {
             text-align: center;
         }
 
-        h6 {
+        h4 {
             text-align: center;
         }
 
@@ -101,9 +102,11 @@
         .fl-table tr:nth-child(even) {
             background: #F8F8F8;
         }
-
+        .btn-14 {background-color: #5ce0cf;} 
+        .btn-15 {background-color: #f44336;}  
+        
         /* Responsive */
-
+        
         @media (max-width: 767px) {
             .fl-table {
                 display: block;
@@ -182,19 +185,23 @@
                 display: block;
                 text-align: center;
             }
+            
         }
+        
     </style>
 </head>
 
 <body>
-    <a href="<?= BASEURL; ?>/Pelanggan/index/">
+    <a href="<?= BASEURL; ?>/Admin/index/">
+        <br>
         <h2>MUTUTAMA</h2>
     </a>
-    <h6> *Tolong cek email atau whatsapp setelah proyek disetujui. Kami akan mengirimkan surat dan dokumen penting pada email Anda</h6>
+    <h4> Daftar Request Pelanggan</h4>
     <div class="table-wrapper">
         <table class="fl-table" id="dataTable" width="100%" cellspacing="0">
             <thead>
                 <tr>
+                    <th>id_request</th>
                     <th>nama</th>
                     <th>phone</th>
                     <th>services</th>
@@ -205,12 +212,14 @@
                     <th>timeline</th>
                     <th>message</th>
                     <th>status</th>
+               
                 </tr>
             </thead>
             <tbody>
                 <?php {
                 ?>
                     <tr>
+                        <td><?= $id_request['id_request']; ?></td>
                         <td><?= $nama['nama']; ?></td>
                         <td><?= $phone['phone']; ?></td>
                         <td><?= $services['services']; ?></td>
@@ -221,9 +230,10 @@
                         <td><?= $timeline['timeline']; ?></td>
                         <td><?= $message['message']; ?></td>
 
-                        <?php if ($status['status'] == 1) {
+                        
+                        <?php if ($status['status'] == 1 ) {
                         ?>
-                            <td>On Requested</td>
+                            <td><a href="<?= BASEURL; ?>/Admin/Order/<?= $id_request['id_request'];?>">On Requested</td>
                         <?php } ?>
                         <?php if ($status['status'] == 2) {
                         ?>
@@ -231,7 +241,7 @@
                         <?php } ?>
                         <?php if ($status['status'] == 3) {
                         ?>
-                            <td>Rejected</td>
+                        <td>Rejected</td>
                         <?php } ?>
                     </tr>
                 <?php } ?>
